@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+.main {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+    font-size: 2.5em;
+}
+
+h2 {
+    color: #444;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+h3 {
+    color: #555;
+    margin-bottom: 15px;
+    font-size: 1.2em;
+}
+
+.inicio {
+    text-align: center;
+    padding: 20px;
+}
+
+select {
+    padding: 10px 15px;
+    font-size: 16px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    margin: 10px;
+    width: 250px;
+}
+
+select:focus {
+    border-color: #000000;
+    outline: none;
+}
+
+button {
+    background-color: #005c0c;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 10px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #035e12;
+}
+
+.questao {
+    background-color: #f8f9fa;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+    border-left: 4px solid #005c0c;
+}
+
+.alternativas {
+    margin: 15px 0;
+}
+
+.alternativas label {
+    display: block;
+    padding: 8px 0;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.alternativas input[type="radio"] {
+    margin-right: 8px;
+}
+
+.alternativas label:hover {
+    background-color: #e9ecef;
+    padding-left: 10px;
+    border-radius: 3px;
+}
+
+.fim {
+    text-align: center;
+    padding: 20px;
+}
+
+.resultado {
+    background-color: #f8f9fa;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+    font-size: 18px;
+}
+
+.nota {
+    font-weight: bold;
+    font-size: 1.3em !important;
+}
+
+.msg1,.msg3,.msg2 {
+    padding: 15px;
+    margin: 20px 0;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.msg1 {
+    background-color: #005c0c;
+    color: #155724;
+    border: 1px solid #005c0c;
+}
+
+.msg2 {
+    background-color: #005c0c;
+    color: white;
+    border-color:#e9ecef
+}
+
+.msg3 {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.botoes {
+    margin: 20px 0;
+}
+
+.botoes a {
+    text-decoration: none;
+}
+
+.botoes button {
+    margin: 5px;
+}
