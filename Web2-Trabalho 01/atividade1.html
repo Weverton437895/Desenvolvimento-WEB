@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizzaria</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(135deg, #ffcc70, #ff884d);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .formulario {
+            display: flex;
+            flex-direction: column;
+            background: #fff;
+            border: 2px solid #d35400;
+            width: 320px;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+            text-align: center;
+            color: #e74c3c;
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        input[type="text"],
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            outline: none;
+            transition: 0.3s;
+        }
+
+        input[type="text"]:focus,
+        select:focus {
+            border-color: #e67e22;
+            box-shadow: 0 0 5px rgba(230, 126, 34, 0.6);
+        }
+
+        .bordasim,
+        .bordanao,
+        .bebida1,
+        .bebida2,
+        .bebida3 {
+            margin-bottom: 8px;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin-right: 8px;
+        }
+
+        input[type="submit"] {
+            background: #e74c3c;
+            color: #fff;
+            padding: 12px;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        input[type="submit"]:hover {
+            background: #c0392b;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+
+<body>
+    <form class="formulario" action="atividade1.php" method="POST">
+        <h1>Pizzaria</h1>
+
+        <label>Digite seu nome:</label>
+        <input type="text" name="nome" required>
+
+        <label>Escolha sua pizza:</label>
+        <select name="pizza" id="mussarela" required>
+            <option value="">Selecione...</option>
+            <option value="mussarela">Mussarela - R$ 30,00</option>
+            <option value="calabresa">Calabresa - R$ 32,00</option>
+            <option value="portuguesa">Portuguesa - R$ 35,00</option>
+        </select>
+
+        <label>Borda Recheada:</label>
+        <div class="bordasim">
+            <input type="radio" value="sim" name="bordaPizza" required> Sim R$ 5,00
+        </div>
+        <div class="bordanao">
+            <input type="radio" value="nao" name="bordaPizza" required> Não
+        </div>
+
+        <label>Bebidas:</label>
+        <div class="bebida1">
+            <input type="checkbox" name="bebida[]" value="refrigerante"> Refrigerante R$ 10,00
+        </div>
+        <div class="bebida2">
+            <input type="checkbox" name="bebida[]" value="suco"> Suco R$ 14,00
+        </div>
+        <div class="bebida3">
+            <input type="checkbox" name="bebida[]" value="agua"> Água R$ 5,00
+        </div>
+
+        <input type="submit" value="Finalizar Pedido">
+    </form>
+</body>
+
+</html>

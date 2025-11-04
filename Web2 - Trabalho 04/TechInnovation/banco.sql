@@ -1,0 +1,36 @@
+CREATE DATABASE IF NOT EXISTS techinnovation;
+
+USE techinnovation;
+
+CREATE TABLE IF NOT EXISTS avaliacao (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(100) NOT NULL,
+    estrelas INT NOT NULL,
+    comentario TEXT NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS usuario (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(100) NOT NULL,
+    email VARCHAR(100) UNIQUE NOT NULL,
+    senha VARCHAR(255) NOT NULL,
+    foto VARCHAR(255)
+);
+
+ALTER TABLE usuario
+ADD COLUMN IF NOT EXISTS nivel ENUM('admin','usuario') NOT NULL DEFAULT 'usuario';
+
+CREATE TABLE IF NOT EXISTS produto (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    titulo VARCHAR(100) NOT NULL,
+    descricao TEXT NOT NULL,
+    foto VARCHAR(255)
+);
+
+CREATE TABLE IF NOT EXISTS contato (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(100) NOT NULL,
+    email VARCHAR(100) NOT NULL,
+    mensagem TEXT NOT NULL,
+    data_envio TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
